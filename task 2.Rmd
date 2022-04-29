@@ -37,7 +37,7 @@ _On-time data for all flights that departed NYC (i.e. JFK, LGA or EWR) in 2013._
 ```{r tidy_data}
 # Use this R-Chunk to clean & wrangle your data!
 ggplot(data = flights,
-       aes(x = arr_delay)) + geom_(color = "red")
+       aes(x = arr_delay)) + geom_bar(color = "blue")
 ```
 
 ## Data Visualization
