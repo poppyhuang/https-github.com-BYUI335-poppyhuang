@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 # Use this R-Chunk to load all your libraries!
 #install.packages("tidyverse") # run this line once in console to get package
 library(tidyverse)
-?nycflights13::flights
+library(nycflights13)
 ```
 
 ```{r load_data}
@@ -30,7 +30,7 @@ library(tidyverse)
 
 ## Background
 
-_On-time data for all flights that departed NYC (i.e. JFK, LGA or EWR) in 2013._
+_On-time data for all flights that departed NYC (i.e. JFK, LGA or EWR) in 2013. In this analysis we are going to look for carrier's relationship with arr_delay times._
 
 ## Data Wrangling
 
@@ -45,6 +45,23 @@ ggplot(data = flights,
 ```{r plot_data}
 # Use this R-Chunk to plot & visualize your data!
 
+ggplot(data = flights) + 
+  geom_point(mapping = aes(x = carrier, y = flight))
+```
+## Data Visualization
+
+```{r plot_data}
+# Use this R-Chunk to plot & visualize your data!
+
+ggplot(data = flights, 
+       mapping = aes(x=carrier, 
+                     y = arr_delay, 
+                     color = arr_delay)) +
+  geom_point(shape = 18)
 ```
 
 ## Conclusions
+
+From what the 3 charts has showed, the first one shows that the delay normally falls into -30 to 100 mins, the most of the flights are on time.
+The second chart shows how many flights has each carriers have in the year of 2013.
+The last graph we can get some useful insights, seems AA, DL and MQ have some bigger problem with delaying flights. AS, UA and US are having less delaying flights.
