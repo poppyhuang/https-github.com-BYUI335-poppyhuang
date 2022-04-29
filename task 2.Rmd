@@ -21,23 +21,23 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 # Use this R-Chunk to load all your libraries!
 #install.packages("tidyverse") # run this line once in console to get package
 library(tidyverse)
-library(nycflights13)
+?nycflights13::flights
 ```
 
 ```{r load_data}
 # Use this R-Chunk to import all your datasets!
-
 ```
 
 ## Background
 
-_Place Task Background Here_
+_On-time data for all flights that departed NYC (i.e. JFK, LGA or EWR) in 2013._
 
 ## Data Wrangling
 
 ```{r tidy_data}
 # Use this R-Chunk to clean & wrangle your data!
-
+ggplot(data = flights,
+       aes(x = arr_delay)) + geom_(color = "red")
 ```
 
 ## Data Visualization
