@@ -1,7 +1,7 @@
 ---
 title: "Wealth and life expectancy"
 author: "Poppy"
-date: "`r format(Sys.time(), '%B %d, %Y')`"
+date: "April 30, 2022"
 output:
   html_document:  
     keep_md: true
@@ -13,21 +13,12 @@ output:
     fig_align: 'center'
 ---
 
-```{r, echo=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
-```
 
-```{r load_libraries, include=FALSE}
-# Use this R-Chunk to load all your libraries!
-#install.packages("tidyverse") # run this line once in console to get package
-library(mosaic)
-library(gapminder)
-library(tidyverse)
-library(dplyr)
 
-```
 
-```{r load_data}
+
+
+```r
 # Use this R-Chunk to import all your datasets!
 newdata <- filter(gapminder, country != "China")
 ```
@@ -39,14 +30,15 @@ Hans Rosling is one of the most popular data scientists on the web. His original
 
 ## Data Wrangling
 
-```{r tidy_data}
-# Use this R-Chunk to clean & wrangle your data!
 
+```r
+# Use this R-Chunk to clean & wrangle your data!
 ```
 
 ## Data Visualization
 
-```{r plot_data}
+
+```r
 # Use this R-Chunk to plot & visualize your data!
 
 ggpplot <- ggplot(newdata,aes(x = lifeExp,
@@ -63,7 +55,6 @@ ggpplot <- ggplot(newdata,aes(x = lifeExp,
 FinalPlot <- ggpplot +
   facet_grid(. ~ year)
 ggsave("Casestudy2.png", FinalPlot, width = 15, units = "in")
-
 ```
 
 ## Conclusions
