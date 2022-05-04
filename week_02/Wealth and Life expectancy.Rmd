@@ -63,7 +63,9 @@ ggpplot <- ggplot(newdata,aes(x = lifeExp,
 FinalPlot <- ggpplot +
   facet_grid(. ~ year)
 ggsave("Casestudy2.png", FinalPlot, width = 15, units = "in")
-
+FinalPlot
 ```
 
 ## Conclusions
+The trend has changed over time, the GDP per capital is definitly growing and the 
+life expextancy has shifted to the right which is higher life expectancy.

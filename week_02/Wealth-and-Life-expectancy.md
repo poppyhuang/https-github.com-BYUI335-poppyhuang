@@ -1,7 +1,7 @@
 ---
 title: "Wealth and life expectancy"
 author: "Poppy"
-date: "April 30, 2022"
+date: "May 03, 2022"
 output:
   html_document:  
     keep_md: true
@@ -55,6 +55,11 @@ ggpplot <- ggplot(newdata,aes(x = lifeExp,
 FinalPlot <- ggpplot +
   facet_grid(. ~ year)
 ggsave("Casestudy2.png", FinalPlot, width = 15, units = "in")
+FinalPlot
 ```
 
+![](Wealth-and-Life-expectancy_files/figure-html/plot_data-1.png)<!-- -->
+
 ## Conclusions
+The trend has changed over time, the GDP per capital is definitly growing and the 
+life expextancy has shifted to the right which is higher life expectancy.
